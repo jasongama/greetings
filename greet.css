@@ -10,11 +10,15 @@ h1{
      width: 200px;
      margin: 60px auto;
     text-align: center;
-    
 
 }
-/* p{
-text-align: center;
-margin: auto;
+.col-12 {
+    width: 96%;
+    text-align: center;
+  }
+                            
+  label {
+    width: 96%;
+    text-align: center;
+  }
 
-} */
