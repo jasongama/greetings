@@ -1,4 +1,4 @@
-function  GreetFactory() {
+var GreetFactory = function () {
      console.log("now running greeting factory")
     var store = {};
     var count = 0;
@@ -6,19 +6,17 @@ function  GreetFactory() {
     function greet(name, lang) {
         console.log("now running greet function")
         store = name;
-        console.log(name, lang);
 
-        if (lang === "english") {
-
-            return "hello, " + name;
+        if (lang === "English") {
+            return "Hello, " + name;
 
         } else if (lang === "Isizulu") {
 
-            return "Sawubona" + name;
+            return "Sawubona, " + name;
 
         } else if (lang === "Afrikaans") {
 
-            return "Halo" + name;
+            return "Hallo, " + name;
         }
     }
 

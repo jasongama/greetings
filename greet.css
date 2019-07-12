@@ -15,10 +15,20 @@ h1{
 .col-12 {
     width: 96%;
     text-align: center;
+    margin: 30px auto;
   }
                             
-  label {
+  .col-11 {
     width: 96%;
-    text-align: center;
+    text-align: center;  
+    margin: auto;
+    padding: auto;
+
   }
 
+.col-10{
+  width: 96%;
+  text-align: center;  
+  margin: auto;
+  padding: auto;
+}
