@@ -1,37 +1,15 @@
 
-function greeting(){
-    
-    var store= {};
-    var count = 0;
-    
-    function  greet (name, lang ){
-        store["name"]= name;
-     
-        if (lang === "english"){
-        
-        return "hello" + name;
-    
-    }else if(lang === "Isizulu"){
-        
-        return "Sawubona" + name;
-    
-    }else if (lang === "Afrikaans"){
-    
-        return "Halo" + name;
-    }
-}
-    function getstore(){
-        return store;
-    }
-    function count(){
-        var names = Object.keys(store);
-        return (names.length);
-    }
+var greetbtn = document.querySelector(".greetbutton");
+// var = document.querySelector(".");
+// var callTotalTwoElement = document.querySelector(".callTotalTwo");
+// var smsTotalTwoElement = document.querySelector(".smsTotalTwo");
+// var totalTwoElement = document.querySelector(".totalTwo");
+
+
+var GreetFactory1 = GreetFactory();
+function GreetFactory1(){
+   
         
 
-    return{
-    greet,
-    count,
-    getstore
-    }
+  
 }

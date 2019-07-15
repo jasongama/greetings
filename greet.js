@@ -22,11 +22,11 @@ function  GreetFactory() {
         }
     }
 
-    function getstore() {
+    function getStore() {
         return store;
     }
 
-    function count() {
+    function getCount() {
         var names = Object.keys(store);
         return (names.length);
     }
@@ -34,7 +34,7 @@ function  GreetFactory() {
 
     return {
         greet,
-        count,
-        getstore
+        getCount,
+        getStore
     }
 }

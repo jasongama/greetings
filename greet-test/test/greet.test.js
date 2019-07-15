@@ -11,8 +11,26 @@ describe('greeting', function() {
         var input = GreetFactory();
         assert.equal(input.greet("Jason", "Afrikaans"), "Hallo, Jason");
          });
-         it("it should show alteast ", function(){
+         it("it should show alteast three characters", function(){
             var input = GreetFactory();
-            assert.equal(input.greet("", "Afrikaans"), "Hallo, ");
+            assert.equal(input.greet("Jas", "Afrikaans"), "Hallo, Jas");
              });
+             it("should store name Jason ", function(){
+
+                var instances =  GreetFactory();
+                instances.greet("jason")
+                
+                assert.deepEqual({name:"Jason"},instances.getstore())
+                 });
+                 it("should count the name Jason", function(){
+
+                    var instances =  GreetFactory();
+                    instances.setCount("Jason")
+                    instances.setCount("Jason")
+                    instances.setCount("Jason")
+                    instances.setCount("Jason")
+                    instances.setCount("Jason")
+                    assert.equal(5, instances.getCount())
+                     });
+                
     });
