@@ -1,45 +1,45 @@
- function GreetFactory (names) {
-     console.log("now running greeting factory")
-    var store = {} || names;
-    var count = 0;
+ function GreetFactory(names) {
+     //  console.log("now running greeting factory")
+     var store = names || {};
+     var theGreeting;
+     // var count = 0;
 
-    function greet(name, lang) {
-        // console.log("now running greet function")
-        var upperCaseName = name.charAt(0).toUpperCase() + name.slice(1)
-         if(store['name'] === undefined){
-           store['name'] = upperCaseName;
+
+     function theGreeting(language, name) {
+         var upperCaseName = name.toUpperCase();
+
+         if (store[upperCaseName] === undefined) {
+             store[upperCaseName] = 0;
+             //   localStorage.setItem(name, 1);
          }
-        if (lang === "English") {
-           
-            return "Hello, " + name;
 
-        } else if (lang === "Isizulu") {
-           
-            return "Sawubona, " + name;
+         if (language === "English") {
+             //console.log(greetFactory1.english())
+             theGreeting = "Hello " + name
+         }
+         if (language === "IsiZulu") {
+             theGreeting = "Sawudona " + name
+         }
+         if (language === "IsiXhosa") {
+             theGreeting = "Molo " + name
+         }
+         return theGreeting
+     }
 
-        } else if (lang === "Afrikaans") {
-           
-            return "Hallo, " + name;
-        }
-    }
+     function getGreet() {
+         return store;
+     }
 
-    function getstore() {
-        return store;
-    }
-    function setCount(){
-        count ++
-    }
+     function counter() {
+         var c = Object.keys(store).length;
+         console.log(c)
+         return c;
+     }
 
-    function getCount() {
-        
-        return count
-    }
+     return {
 
-    return {
-        greet,
-        count,
-        getstore,
-        setCount,
-        getCount
-    }
-}
+         counter,
+         getGreet,
+         theGreeting
+     }
+ }

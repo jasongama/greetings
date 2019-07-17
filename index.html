@@ -13,18 +13,29 @@
 <body>
     <h1>Greetings</h1>
     <div class ="col-11">Name
-        <input type="text" id="fname"  placeholder="Enter your name" name="" value=""> 
+        <input type="text" class="fname"  placeholder="Enter your name" name="" value=""> 
     </div>
         <div class="col-12">
          <input type="radio" class="iteamTypeRadio" name="greet" value="English">English
-        <input type="radio" name="greet" class="iteamTypeRadio" value="Isizulu"> Isizulu
-        <input type="radio" name="greet" class="iteamTypeRadio" value="Afrikaans"> Afrikaans
+        <input type="radio" name="greet" class="iteamTypeRadio" value="IsiZulu"> Isizulu
+        <input type="radio" name="greet" class="iteamTypeRadio" value="IsiXhosa"> IsiXhosa
     </div>
-    <div class="col-10">
-        <button class="greetButton" type="submit" name="greet me" value="Submit"> greet me</button>
+     <div class="col-10">
+        <button class="greetButton" type="button" name="greetme" value="greetme"> greet me</button>
+        <div class="gross"></div>
+     </div>
+     <div class="col-9">
+        <p class="">
+            <strong> Counter : &nbsp;
+                <span class ="count">0</span>
+            </strong>
+        </p>
+        <button class="resettingButtontr">Reset</button>
+    </div>
+   
+    <script src="./greetLogic.js" ></script>
+    <script src="./greet.dom.js" ></script>
 
-    </div>
 </body>
-<!-- <script src="greet.js"></script> -->
 
 </html>

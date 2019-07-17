@@ -32,3 +32,9 @@ h1{
   margin: auto;
   padding: auto;
 }
+.col-9{
+  width: 96%;
+  text-align: top;  
+  margin: auto;
+  padding: auto;
+}
