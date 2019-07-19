@@ -13,12 +13,12 @@
 <body>
     <h1>Greetings</h1>
     <div class ="col-11">Name
-        <input type="text" class="fname"  placeholder="Enter your name" name="" value=""> 
+        <input type="text" class="fname"  placeholder="Enter your name" name="" value="" id="field_1"> 
     </div>
         <div class="col-12">
-         <input type="radio" class="iteamTypeRadio" name="greet" value="English">English
-        <input type="radio" name="greet" class="iteamTypeRadio" value="IsiZulu"> Isizulu
-        <input type="radio" name="greet" class="iteamTypeRadio" value="IsiXhosa"> IsiXhosa
+         <input type="radio" class="itemTypeRadio" name="greet" value="English" id="tglEng">English
+        <input type="radio" name="greet" class="itemTypeRadio" value="IsiZulu" id="tglIsz"> Isizulu
+        <input type="radio" name="greet" class="itemTypeRadio" value="IsiXhosa" id="tglIsx"> IsiXhosa
     </div>
      <div class="col-10">
         <button class="greetButton" type="button" name="greetme" value="greetme"> greet me</button>
@@ -30,7 +30,7 @@
                 <span class ="count">0</span>
             </strong>
         </p>
-        <button class="resettingButtontr">Reset</button>
+        <input class="reset" name="resetButton" type="button" onclick="" value="resetButton"> 
     </div>
    
     <script src="./greetLogic.js" ></script>

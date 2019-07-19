@@ -1,33 +1,42 @@
-var fname = document.querySelector(".fname");
+// var fname = document.querySelector(".fname");
 var greetbtnElement = document.querySelector(".greetButton");
-var iteamTypeRadiobtn = document.querySelector(".iteamTypeRadio");
-var resetbtn = document.querySelector(".resettingButton");
+// var iteamTypeRadiobtn = document.querySelector(".itemTypeRadio");.
+var resetbtn = document.querySelector(".reset");
 var counter = document.querySelector(".count");
 var greetingElem = document.querySelector(".gross");
+var fname = document.querySelector(".fname");
 
-var greetFactory1 = GreetFactory();
-             //   localStorage.setItem(name, 1);
+
+var greeting= JSON.parse(localStorage.getItem("name"));
+var greetFactory1 = GreetFactory(greeting);
+countFun()
+
 
 function greetingsFunction() {
-
-    var fname = document.querySelector(".fname").value;
-
-    var iteamTypeRadio = document.querySelectorAll(".iteamTypeRadio");
+    var iteamTypeRadio = document.querySelectorAll(".itemTypeRadio");
 
     for (var i = 0; i < iteamTypeRadio.length; i++) {
         if (iteamTypeRadio[i].checked) {
-            var xman = iteamTypeRadio[i].value
+            var lang = iteamTypeRadio[i].value
         }
-
-    }
- 
-    greetingElem.innerHTML = greetFactory1.theGreeting(xman, fname)
-
-    countFun()
+    
 }
-
+    greetingElem.innerHTML = "";
+    var inputField = fname.value
+    greetFactory1.greetInput(lang, inputField)
+    greetingElem.innerHTML = greetFactory1.message();
+    localStorage.setItem("name", JSON.stringify(greetFactory1.getGreet()));
+    
+countFun()
+}
 function countFun(){
     counter.innerHTML = greetFactory1.counter(); 
 }
-
+function resetButton(){
+    localStorage.clear();
+    counter.innerHTML="";
+    greetingElem .innerHTML="";
+    // .getElementById("myForm").reset();
+}
 greetbtnElement.addEventListener('click', greetingsFunction);
+resetbtn .addEventListener('click', resetButton);
