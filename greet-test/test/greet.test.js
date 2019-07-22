@@ -1,7 +1,7 @@
 describe('greeting', function() {
     it("It should greet a person first name in english", function(){
         var input = GreetFactory();
-        input.message("Jason" )
+        input.message("jason" )
         input.greetInput("English", "Jason")
         assert.equal(   input.message( ),"Hello, Jason");
 

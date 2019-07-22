@@ -8,18 +8,18 @@
      function greetInput(language, name) {
         
          if(name && language){
-            var upperCaseName = name.toUpperCase();
+            var upperCaseName = name.charAt(0).toUpperCase()+ name.slice(1);
          if (store[upperCaseName] === undefined) {
              store[upperCaseName] = 0;
         }
          if (language === "English") {
-             theGreeting = "Hello, " + name
+             theGreeting = "Hello, " + upperCaseName
          }
          else if (language === "IsiZulu") {
-             theGreeting = "Sawubona, " + name
+             theGreeting = "Sawubona, " + upperCaseName
          }
          else if (language === "IsiXhosa") {
-             theGreeting = "Molo, " + name
+             theGreeting = "Molo, " + upperCaseName
          }
          }
          else{
