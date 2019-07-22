@@ -4,14 +4,19 @@
     --light: #fff;
     --shadow: 0 1px 5px rgba(104,104,104, 0.8);
     }
-
+    body{
+      background-image: url("https://images.pexels.com/photos/988873/pexels-photo-988873.jpeg?cs=srgb&dl=architecture-attractive-background-988873.jpg&fm=jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
 h1{
      border: 5px solid blue;
      width: 200px;
      margin: 60px auto;
     text-align: center;
-
+    
 }
+
 .col-12 {
     width: 96%;
     text-align: center;

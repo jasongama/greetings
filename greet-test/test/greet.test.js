@@ -22,7 +22,7 @@ describe('greeting', function() {
             var input = GreetFactory();
             input.message("")
             input.greetInput()
-            assert.equal(input.message(), "please entere the Name or select your languege");
+            assert.equal(input.message(), "please enter the firstname or select a languege");
              });
              it("It should make the name Jason an upperCase", function(){
 

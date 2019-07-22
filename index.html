@@ -8,8 +8,10 @@
     <title>Greetings</title>
     <link href="greet.css" rel="stylesheet" type="text/css">
     <link href="simple-grid.css" rel="stylesheet" type="text/css">
+
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"
-        integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+        integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous">
+        </script>
 </head>
 
 <body>
@@ -37,12 +39,12 @@
    
     <script src="./greetLogic.js" ></script>
     <script src="./greet.dom.js" ></script>
-
-</body>
-<script>
-        $("#textName").keyup(function (e) {
+    <script>
+        $("#field_1").keyup(function (e) {
             var regex = /^[a-zA-Z]+$/;
             (regex.test(this.value) !== true) ? this.value = this.value.replace(/[^a-zA-Z]+/, '') : this.value
         });
     </script>
+</body>
+
 </html>
