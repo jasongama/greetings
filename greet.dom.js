@@ -1,13 +1,12 @@
-// var fname = document.querySelector(".fname");
 var greetbtnElement = document.querySelector(".greetButton");
-// var iteamTypeRadiobtn = document.querySelector(".itemTypeRadio");.
+
 var resetbtn = document.querySelector(".reset");
 var counter = document.querySelector(".count");
 var greetingElem = document.querySelector(".gross");
 var fname = document.querySelector(".fname");
 
 
-var greeting= JSON.parse(localStorage.getItem("name"));
+var greeting = JSON.parse(localStorage.getItem("name"));
 var greetFactory1 = GreetFactory(greeting);
 countFun()
 
@@ -19,24 +18,26 @@ function greetingsFunction() {
         if (iteamTypeRadio[i].checked) {
             var lang = iteamTypeRadio[i].value
         }
-    
-}
+
+    }
     greetingElem.innerHTML = "";
     var inputField = fname.value
     greetFactory1.greetInput(lang, inputField)
     greetingElem.innerHTML = greetFactory1.message();
     localStorage.setItem("name", JSON.stringify(greetFactory1.getGreet()));
-    
-countFun()
+
+    countFun()
 }
-function countFun(){
-    counter.innerHTML = greetFactory1.counter(); 
+
+function countFun() {
+    counter.innerHTML = greetFactory1.counter();
 }
-function resetButton(){
+
+function resetButton() {
     localStorage.clear();
-    counter.innerHTML="";
-    greetingElem .innerHTML="";
-    // .getElementById("myForm").reset();
+    counter.innerHTML = "";
+    greetingElem.innerHTML = "";
+   
 }
 greetbtnElement.addEventListener('click', greetingsFunction);
-resetbtn .addEventListener('click', resetButton);
+resetbtn.addEventListener('click', resetButton);
