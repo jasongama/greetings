@@ -41,5 +41,13 @@ describe('greeting', function() {
                   input.greetInput("English", "Daniel");
                   assert.equal(input.counter(), 4)
                      });
-                
+                     it("It doesn't accept duplicate", function(){
+
+                        var input = GreetFactory();
+                      input.greetInput("English", "Jason");
+                      input.greetInput("English", "Jason");
+                      input.greetInput("English", "Jason");
+                      input.greetInput("English", "Jason");
+                      assert.equal(input.counter(), 1)
+                         });
     });
