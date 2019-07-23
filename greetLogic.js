@@ -6,9 +6,9 @@
 
 
      function greetInput(language, name) {
-        
+        var upperCaseName = name.toUpperCase();
          if(name && language){
-            var upperCaseName = name.charAt(0).toUpperCase()+ name.slice(1);
+            
          if (store[upperCaseName] === undefined) {
              store[upperCaseName] = 0;
         }

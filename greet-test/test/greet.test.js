@@ -41,7 +41,7 @@ describe('greeting', function () {
         input.greetInput("English", "Daniel");
         assert.equal(input.counter(), 4)
     });
-    it("My greetings app doesn't allow users to enter the same name twice", function () {
+    it("My greetings app only count the same name once", function () {
 
         var input = GreetFactory();
         input.greetInput("English", "Jason");
@@ -49,5 +49,12 @@ describe('greeting', function () {
         input.greetInput("English", "Jason");
         input.greetInput("English", "Jason");
         assert.equal(input.counter(), 1)
+    });
+    it("My greet one user more than once and", function () {
+
+        var input = GreetFactory();
+        input.greetInput("English", "Jason");
+       
+        assert.equal(input.counter(), 2)
     });
 });
