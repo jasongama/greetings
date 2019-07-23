@@ -50,11 +50,4 @@ describe('greeting', function () {
         input.greetInput("English", "Jason");
         assert.equal(input.counter(), 1)
     });
-    it("My greet one user more than once and", function () {
-
-        var input = GreetFactory();
-        input.greetInput("English", "Jason");
-       
-        assert.equal(input.counter(), 2)
-    });
 });
