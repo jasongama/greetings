@@ -23,7 +23,7 @@
          }
          }
          else{
-            theGreeting = "please enter the firstname or select a languege";      
+            theGreeting = "please enter the firstname or select a language";      
          }
      }
 
